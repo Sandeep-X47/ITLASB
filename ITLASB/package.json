@@ -1,0 +1,15 @@
+{
+  "name": "itlasb",
+  "version": "1.0.0",
+  "description": "Intelligent Truck Load Assignment System using Backtracking",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "setup:db": "cd backend && node scripts/setupDatabase.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

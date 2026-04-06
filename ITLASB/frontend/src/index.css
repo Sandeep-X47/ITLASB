@@ -1,0 +1,59 @@
+:root {
+  --bg: #0a0c10;
+  --bg2: #111418;
+  --bg3: #181c22;
+  --bg4: #1e2330;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.13);
+  --text: #e8eaf0;
+  --text2: #8b91a0;
+  --text3: #4a5060;
+  --amber: #f59e0b;
+  --amber2: #fbbf24;
+  --amber3: #451a03;
+  --teal: #14b8a6;
+  --green: #22c55e;
+  --red: #ef4444;
+  --blue: #3b82f6;
+  --purple: #a78bfa;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+/* Leaflet dark overrides */
+.leaflet-container { background: #0d1117 !important; }
+.leaflet-tile-pane { filter: brightness(0.6) saturate(0.5) hue-rotate(200deg); }
+.leaflet-control-zoom a { background: var(--bg2) !important; color: var(--text) !important; border-color: var(--border2) !important; }
+.leaflet-popup-content-wrapper { background: var(--bg2) !important; color: var(--text) !important; border: 1px solid var(--border2); border-radius: 10px !important; }
+.leaflet-popup-tip { background: var(--bg2) !important; }
+.leaflet-popup-content { font-family: var(--font-body); }
+
+/* Toast */
+.toast { position: fixed; bottom: 24px; right: 24px; background: var(--bg2); border: 1px solid var(--border2); border-radius: 10px; padding: 12px 18px; font-size: 13px; z-index: 9999; animation: slideUp .3s ease; max-width: 320px; }
+.toast-success { border-left: 3px solid var(--green); }
+.toast-error   { border-left: 3px solid var(--red); }
+.toast-info    { border-left: 3px solid var(--amber); }
+
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes pulse   { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+@keyframes spin    { to { transform: rotate(360deg); } }
+
+.spin { animation: spin 1s linear infinite; }
+.pulse { animation: pulse 2s ease-in-out infinite; }
+
+button { cursor: pointer; font-family: var(--font-body); }
+input, select, textarea { font-family: var(--font-body); }
