@@ -280,7 +280,6 @@ This system demonstrates:
 
 * Sandeep Kumar
 * Puranjey
-Chennai, India
 
 ---
 
