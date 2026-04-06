@@ -278,8 +278,8 @@ This system demonstrates:
 
 ## 👨‍💻 Author
 
-Sandeep Kumar
-Puranjey
+* Sandeep Kumar
+* Puranjey
 Chennai, India
 
 ---
